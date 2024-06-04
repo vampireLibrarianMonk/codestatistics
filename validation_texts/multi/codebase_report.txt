@@ -1,0 +1,65 @@
+Total archives found: 34
+Archives by type:
+.gz: 4
+.zip: 9
+.bz2: 5
+.tar: 16
+
+Total files found: 1530
+Total lines of code found: 19215
+
+Files of each type found:
+c: 107
+cc: 20
+cjs: 76
+cpp: 24
+cxx: 29
+h: 135
+h++: 19
+hpp: 25
+hxx: 21
+inl: 16
+ipp: 20
+java: 204
+js: 76
+mjs: 69
+py: 44
+pyc: 49
+pyd: 42
+pyo: 31
+pyw: 50
+r: 74
+rdata: 64
+rds: 83
+tcc: 15
+tpp: 18
+ts: 115
+tsx: 104
+
+Language statistics:
+c: 1315 lines (6.84%)
+cc: 253 lines (1.32%)
+cjs: 974 lines (5.07%)
+cpp: 288 lines (1.50%)
+cxx: 312 lines (1.62%)
+h: 1607 lines (8.36%)
+h++: 243 lines (1.26%)
+hpp: 290 lines (1.51%)
+hxx: 310 lines (1.61%)
+inl: 212 lines (1.10%)
+ipp: 234 lines (1.22%)
+java: 2609 lines (13.58%)
+js: 954 lines (4.96%)
+mjs: 893 lines (4.65%)
+py: 590 lines (3.07%)
+pyc: 633 lines (3.29%)
+pyd: 511 lines (2.66%)
+pyo: 410 lines (2.13%)
+pyw: 665 lines (3.46%)
+r: 904 lines (4.70%)
+rdata: 806 lines (4.19%)
+rds: 982 lines (5.11%)
+tcc: 203 lines (1.06%)
+tpp: 225 lines (1.17%)
+ts: 1468 lines (7.64%)
+tsx: 1324 lines (6.89%)
