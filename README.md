@@ -110,6 +110,52 @@ Language statistics:
 .ts: 150 lines (20.00%)
 ```
 
+Code Statistics with Multiprocessing: code_statistics_multiprocessing.py
+This script analyzes the generated files and provides statistics on the files and their contents. It uses multiprocessing to speed up the analysis.
+
+Arguments
+search_directory: The directory containing the files and subdirectories to be analyzed.
+--cpus: (Optional) Number of CPUs to use for multiprocessing. Default is one less than the total number of CPUs available.
+Running the Script
+```
+python code_statistics_multiprocessing.py <search_directory> --cpus <number_of_cpus>
+```
+
+Example
+```
+python code_statistics_multiprocessing.py ./test_directory --cpus 4
+```
+
+This command will analyze the contents of test_directory using 4 CPUs and produce a report.
+
+Code Statistics Output
+The script code_statistics_multiprocessing.py generates a codebase_report.txt file with the following structure:
+
+```
+Total archives found: 5
+Archives by type:
+.tar: 1
+.tar.gz: 2
+.zip: 2
+
+Total files found: 50
+Total lines of code found: 750
+
+Files of each type found:
+.cpp: 10
+.h: 10
+.js: 10
+.py: 10
+.ts: 10
+
+Language statistics:
+.cpp: 150 lines (20.00%)
+.h: 150 lines (20.00%)
+.js: 150 lines (20.00%)
+.py: 150 lines (20.00%)
+.ts: 150 lines (20.00%)
+```
+
 Notes
 Ensure you have the necessary permissions to create and modify files in the specified directories.
 The scripts were tested with Python 3.9.7.
