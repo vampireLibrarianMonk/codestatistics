@@ -3,62 +3,54 @@ Number of subdirectories: 10
 Number of files per subdirectory: 45
 Maximum subdirectory depth: 5
 
-Total subdirectories created: 34
-Total files created: 1530
-Total lines of code generated: 19215
+Total subdirectories created: 26
+Total files created: 1170
+Total lines of code generated: 20853
 
 Files of each type created:
-.c: 107
-.cc: 20
-.cjs: 76
-.cpp: 24
-.cxx: 29
-.h: 135
-.h++: 19
-.hpp: 25
-.hxx: 21
-.inl: 16
-.ipp: 20
-.java: 204
-.js: 76
-.mjs: 69
-.py: 44
-.pyc: 49
-.pyd: 42
-.pyo: 31
-.pyw: 50
-.r: 74
-.rdata: 64
-.rds: 83
-.tcc: 15
-.tpp: 18
-.ts: 115
-.tsx: 104
+.c: 67
+.cc: 16
+.cjs: 54
+.cpp: 14
+.cxx: 16
+.h: 81
+.h++: 10
+.hpp: 21
+.hxx: 13
+.inl: 15
+.ipp: 24
+.java: 179
+.js: 56
+.mjs: 36
+.py: 184
+.r: 64
+.rdata: 42
+.rds: 65
+.tcc: 20
+.tpp: 15
+.ts: 85
+.tsx: 93
 
-Code statistics:
-.c: 1315 lines (6.84%)
-.cc: 253 lines (1.32%)
-.cjs: 974 lines (5.07%)
-.cpp: 288 lines (1.50%)
-.cxx: 312 lines (1.62%)
-.h: 1607 lines (8.36%)
-.h++: 243 lines (1.26%)
-.hpp: 290 lines (1.51%)
-.hxx: 310 lines (1.61%)
-.inl: 212 lines (1.10%)
-.ipp: 234 lines (1.22%)
-.java: 2609 lines (13.58%)
-.js: 954 lines (4.96%)
-.mjs: 893 lines (4.65%)
-.py: 590 lines (3.07%)
-.pyc: 633 lines (3.29%)
-.pyd: 511 lines (2.66%)
-.pyo: 410 lines (2.13%)
-.pyw: 665 lines (3.46%)
-.r: 904 lines (4.70%)
-.rdata: 806 lines (4.19%)
-.rds: 982 lines (5.11%)
-.tcc: 203 lines (1.06%)
-.tpp: 225 lines (1.17%)
-.ts: 1468 lines (7.64%)
-.tsx: 1324 lines (6.89%)
+Language statistics:
+.c: 1236 lines [586 code - 650 comments] (5.93%)
+.cc: 277 lines [163 code - 114 comments] (1.33%)
+.cjs: 966 lines [538 code - 428 comments] (4.63%)
+.cpp: 252 lines [137 code - 115 comments] (1.21%)
+.cxx: 340 lines [161 code - 179 comments] (1.63%)
+.h: 1431 lines [722 code - 709 comments] (6.86%)
+.h++: 189 lines [90 code - 99 comments] (0.91%)
+.hpp: 355 lines [162 code - 193 comments] (1.70%)
+.hxx: 200 lines [102 code - 98 comments] (0.96%)
+.inl: 264 lines [129 code - 135 comments] (1.27%)
+.ipp: 453 lines [221 code - 232 comments] (2.17%)
+.java: 3235 lines [1613 code - 1622 comments] (15.51%)
+.js: 1060 lines [540 code - 520 comments] (5.08%)
+.mjs: 656 lines [337 code - 319 comments] (3.15%)
+.py: 3165 lines [1632 code - 1533 comments] (15.18%)
+.r: 1184 lines [608 code - 576 comments] (5.68%)
+.rdata: 686 lines [350 code - 336 comments] (3.29%)
+.rds: 1106 lines [579 code - 527 comments] (5.30%)
+.tcc: 330 lines [181 code - 149 comments] (1.58%)
+.tpp: 238 lines [120 code - 118 comments] (1.14%)
+.ts: 1526 lines [796 code - 730 comments] (7.32%)
+.tsx: 1704 lines [826 code - 878 comments] (8.17%)
