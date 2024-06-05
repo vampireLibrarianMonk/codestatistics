@@ -4,12 +4,9 @@ import zipfile
 import tempfile
 import shutil
 from collections import defaultdict
-from multiprocessing import Pool, Manager, cpu_count
-import argparse
-import sys
 
 # Function to extract archives using tar, gz, or zip format
-def extract(archive, extract_to, archive_types, lock):
+def extract(archive, extract_to):
     try:
         if archive.endswith(('.tar', '.tar.gz', '.tar.bz2', '.tgz')):
             with tarfile.open(archive, 'r:*') as tar:
@@ -20,10 +17,6 @@ def extract(archive, extract_to, archive_types, lock):
         else:
             print(f"Error: Unknown archive format for file '{archive}'", file=sys.stderr)
             exit(1)
-        
-        archive_type = os.path.splitext(archive)[-1].lower()
-        with lock:
-            archive_types[archive_type] = archive_types.get(archive_type, 0) + 1
     except Exception as e:
         print(f"Error: Failed to extract archive '{archive}': {e}", file=sys.stderr)
         exit(1)
@@ -32,13 +25,64 @@ def extract(archive, extract_to, archive_types, lock):
 def get_lang(file):
     return file.split('.')[-1].lower()
 
+# Comment symbols for each file extension
+comment_symbols = {
+    '.py': ('#', ('"""', '"""')),
+    '.cjs': ('//', ('/*', '*/')),
+    '.js': ('//', ('/*', '*/')),
+    '.mjs': ('//', ('/*', '*/')),
+    '.ts': ('//', ('/*', '*/')),
+    '.tsx': ('//', ('/*', '*/')),
+    '.c': ('//', ('/*', '*/')),
+    '.h': ('//', ('/*', '*/')),
+    '.cpp': ('//', ('/*', '*/')),
+    '.cc': ('//', ('/*', '*/')),
+    '.cxx': ('//', ('/*', '*/')),
+    '.hpp': ('//', ('/*', '*/')),
+    '.hxx': ('//', ('/*', '*/')),
+    '.h++': ('//', ('/*', '*/')),
+    '.inl': ('//', ('/*', '*/')),
+    '.ipp': ('//', ('/*', '*/')),
+    '.tcc': ('//', ('/*', '*/')),
+    '.tpp': ('//', ('/*', '*/')),
+    '.java': ('//', ('/*', '*/')),
+    '.r': ('#', ('/*', '*/')),
+    '.rdata': ('#', ('/*', '*/')),
+    '.rds': ('#', ('/*', '*/'))
+}
+
 # Function to count lines of code and update statistics for each language
-def count_loc(loc, file, lang_stats, tot_loc, file_type_counts, lock):
-    with lock:
-        tot_loc.value += loc
-        lang = get_lang(file)
-        lang_stats[lang] = lang_stats.get(lang, 0) + loc
-        file_type_counts[lang] = file_type_counts.get(lang, 0) + 1
+def count_loc(file, lang_stats):
+    global tot_loc
+    extension = os.path.splitext(file)[1].lower()
+    single_line_comment_symbol, multi_line_comment_symbols = comment_symbols.get(extension, ('#', ('"""', '"""')))
+
+    loc = 0
+    comment_loc = 0
+    in_multi_line_comment = False
+
+    with open(file, 'r', errors='ignore') as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                loc += 1
+                if in_multi_line_comment:
+                    comment_loc += 1
+                    if multi_line_comment_symbols[1] in line:
+                        in_multi_line_comment = False
+                elif line.startswith(multi_line_comment_symbols[0]):
+                    comment_loc += 1
+                    in_multi_line_comment = True
+                elif line.startswith(multi_line_comment_symbols[0]):
+                    comment_loc += 1
+                elif line.startswith(single_line_comment_symbol):
+                    comment_loc += 1
+
+    tot_loc += loc
+    lang_stats[extension]['total'] += loc
+    lang_stats[extension]['comments'] += comment_loc
+    lang_stats[extension]['code'] += (loc - comment_loc)
+    print(f"Counted {loc} lines in {file} (extension: {extension}, {loc - comment_loc} code - {comment_loc} comments)")
 
 # Function to find archives in the search directory
 def find_archives(search_dir):
@@ -50,7 +94,9 @@ def find_archives(search_dir):
     return archives
 
 # Function to recursively extract all archives
-def extract_all_archives(search_dir, archive_types, lock):
+def extract_all_archives(search_dir):
+    archive_types = defaultdict(int)
+
     while True:
         archives = find_archives(search_dir)
         if not archives:
@@ -58,9 +104,12 @@ def extract_all_archives(search_dir, archive_types, lock):
 
         for archive in archives:
             print(f"Found archive: {archive}")
+            archive_type = os.path.splitext(archive)[-1].lower()
+            archive_types[archive_type] += 1
+
             temp_dir = tempfile.mkdtemp()
             try:
-                extract(archive, temp_dir, archive_types, lock)
+                extract(archive, temp_dir)
                 for item in os.listdir(temp_dir):
                     s = os.path.join(temp_dir, item)
                     d = os.path.join(search_dir, item)
@@ -72,76 +121,71 @@ def extract_all_archives(search_dir, archive_types, lock):
                         shutil.move(s, d)
             finally:
                 shutil.rmtree(temp_dir)
-            
+
             os.remove(archive)
 
+    return archive_types
+
 # Function to process source code files in a single extracted directory
-def process_files_in_directory(directory, lang_stats, tot_loc, file_type_counts, total_files_found, lock):
-    print(f"Processing directory: {directory} with PID: {os.getpid()}")
+def process_files_in_directory(directory):
+    global lang_stats, total_files_found, file_type_counts
+    print(f"Processing directory: {directory}")
     for root, _, files in os.walk(directory):
         for file in files:
             if file.endswith(('.tar.gz', '.tar.bz2', '.tar', '.zip', '.tgz')):
                 continue  # Skip archive files
             file_path = os.path.join(root, file)
-            print(f"Processing file: {file_path} with PID: {os.getpid()}")
+            print(f"Processing file: {file_path}")
             try:
-                with open(file_path, 'r', errors='ignore') as f:
-                    loc = sum(1 for _ in f)
-                count_loc(loc, file_path, lang_stats, tot_loc, file_type_counts, lock)
-                with lock:
-                    total_files_found.value += 1
+                count_loc(file_path, lang_stats)
+                file_type_counts[os.path.splitext(file)[1].lower()] += 1
+                total_files_found += 1
             except Exception as e:
                 print(f"Error processing file {file_path}: {e}", file=sys.stderr)
 
+# Initialize variables for the total lines of code and the language statistics
+tot_loc = 0
+total_files_found = 0
+lang_stats = defaultdict(lambda: {'total': 0, 'code': 0, 'comments': 0})
+file_type_counts = defaultdict(int)
+
 # Function to generate the codebase report
-def create_report(report_path, archive_types, total_files_found, tot_loc, file_type_counts, lang_stats):
+def create_report(report_path, archive_types):
     with open(report_path, 'w') as report_file:
         report_file.write(f"Total archives found: {sum(archive_types.values())}\n")
         report_file.write("Archives by type:\n")
         for ext, count in archive_types.items():
             report_file.write(f"{ext}: {count}\n")
-        
-        report_file.write(f"\nTotal files found: {total_files_found.value}\n")
-        report_file.write(f"Total lines of code found: {tot_loc.value}\n\n")
-        
+
+        report_file.write(f"\nTotal files found: {total_files_found}\n")
+        report_file.write(f"Total lines of code found: {tot_loc}\n\n")
+
         report_file.write("Files of each type found:\n")
-        for ext in sorted(file_type_counts.keys()):
+        for ext in sorted(file_type_counts):
             report_file.write(f"{ext}: {file_type_counts[ext]}\n")
-        
+
         report_file.write("\nLanguage statistics:\n")
-        for lang in sorted(lang_stats.keys()):
-            count = lang_stats[lang]
-            percentage = (count / tot_loc.value) * 100 if tot_loc.value > 0 else 0
-            report_file.write(f"{lang}: {count} lines ({percentage:.2f}%)\n")
+        for lang in sorted(lang_stats):
+            count = lang_stats[lang]['total']
+            code_count = lang_stats[lang]['code']
+            comment_count = lang_stats[lang]['comments']
+            percentage = (count / tot_loc) * 100 if tot_loc > 0 else 0
+            report_file.write(f"{lang}: {count} lines [{code_count} code - {comment_count} comments] ({percentage:.2f}%)\n")
 
 # Main script execution
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Analyze codebase and generate statistics")
-    parser.add_argument("search_directory", help="Directory to search for code files and archives")
-    parser.add_argument("--cpus", type=int, default=cpu_count() - 1, help="Number of CPUs to use (default: one less than the total number of CPUs)")
+    import sys
 
-    args = parser.parse_args()
+    if len(sys.argv) != 2:
+        print("Usage: python script.py <search_directory>")
+        sys.exit(1)
 
-    search_dir = args.search_directory
-    num_cpus = args.cpus
+    search_dir = sys.argv[1]
 
     try:
-        manager = Manager()
-        lang_stats = manager.dict()
-        tot_loc = manager.Value('i', 0)
-        file_type_counts = manager.dict()
-        total_files_found = manager.Value('i', 0)
-        archive_types = manager.dict()
-        lock = manager.Lock()
-
-        extract_all_archives(search_dir, archive_types, lock)
-
-        subdirs = [os.path.join(search_dir, d) for d in os.listdir(search_dir) if os.path.isdir(os.path.join(search_dir, d))]
-
-        with Pool(processes=num_cpus) as pool:
-            pool.starmap(process_files_in_directory, [(subdir, lang_stats, tot_loc, file_type_counts, total_files_found, lock) for subdir in subdirs])
-
-        create_report(os.path.join(search_dir, "codebase_report.txt"), archive_types, total_files_found, tot_loc, file_type_counts, lang_stats)
+        archive_types = extract_all_archives(search_dir)
+        process_files_in_directory(search_dir)
+        create_report(os.path.join(search_dir, "codebase_report.txt"), archive_types)
     except Exception as e:
         print(f"An error occurred: {e}", file=sys.stderr)
         sys.exit(1)
