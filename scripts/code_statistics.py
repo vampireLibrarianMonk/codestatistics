@@ -25,13 +25,66 @@ def extract(archive, extract_to):
 def get_lang(file):
     return file.split('.')[-1].lower()
 
+# Comment symbols for each file extension
+comment_symbols = {
+    '.py': ('#', ('"""', '"""')),
+    '.cjs': ('//', ('/*', '*/')),
+    '.js': ('//', ('/*', '*/')),
+    '.mjs': ('//', ('/*', '*/')),
+    '.ts': ('//', ('/*', '*/')),
+    '.tsx': ('//', ('/*', '*/')),
+    '.c': ('//', ('/*', '*/')),
+    '.h': ('//', ('/*', '*/')),
+    '.cpp': ('//', ('/*', '*/')),
+    '.cc': ('//', ('/*', '*/')),
+    '.cxx': ('//', ('/*', '*/')),
+    '.hpp': ('//', ('/*', '*/')),
+    '.hxx': ('//', ('/*', '*/')),
+    '.h++': ('//', ('/*', '*/')),
+    '.inl': ('//', ('/*', '*/')),
+    '.ipp': ('//', ('/*', '*/')),
+    '.tcc': ('//', ('/*', '*/')),
+    '.tpp': ('//', ('/*', '*/')),
+    '.java': ('//', ('/*', '*/')),
+    '.r': ('#', ('/*', '*/')),
+    '.rdata': ('#', ('/*', '*/')),
+    '.rds': ('#', ('/*', '*/'))
+}
+
 # Function to count lines of code and update statistics for each language
-def count_loc(loc, file, lang_stats):
+def count_loc(file, lang_stats):
     global tot_loc
+    extension = os.path.splitext(file)[1].lower()
+    if extension == '.py':
+        print("test")
+    single_line_comment_symbol, multi_line_comment_symbols = comment_symbols.get(extension, ('#', ('"""', '"""')))
+    
+    loc = 0
+    comment_loc = 0
+    in_multi_line_comment = False
+
+    with open(file, 'r', errors='ignore') as f:
+        for line in f:
+            line = line.strip()
+            if line:
+                loc += 1
+                if in_multi_line_comment:
+                    comment_loc += 1
+                    if multi_line_comment_symbols[1] in line:
+                        in_multi_line_comment = False
+                elif line.startswith(multi_line_comment_symbols[0]):
+                    comment_loc += 1
+                    in_multi_line_comment = True
+                elif line.startswith(multi_line_comment_symbols[0]):
+                    comment_loc += 1
+                elif line.startswith(single_line_comment_symbol):
+                    comment_loc += 1
+
     tot_loc += loc
-    lang = get_lang(file)
-    lang_stats[lang] += loc
-    print(f"Counted {loc} lines in {file} (language: {lang})")
+    lang_stats[extension]['total'] += loc
+    lang_stats[extension]['comments'] += comment_loc
+    lang_stats[extension]['code'] += (loc - comment_loc)
+    print(f"Counted {loc} lines in {file} (extension: {extension}, {loc - comment_loc} code - {comment_loc} comments)")
 
 # Function to find archives in the search directory
 def find_archives(search_dir):
@@ -86,10 +139,8 @@ def process_files_in_directory(directory):
             file_path = os.path.join(root, file)
             print(f"Processing file: {file_path}")
             try:
-                with open(file_path, 'r', errors='ignore') as f:
-                    loc = sum(1 for _ in f)
-                count_loc(loc, file_path, lang_stats)
-                file_type_counts[get_lang(file)] += 1
+                count_loc(file_path, lang_stats)
+                file_type_counts[os.path.splitext(file)[1].lower()] += 1
                 total_files_found += 1
             except Exception as e:
                 print(f"Error processing file {file_path}: {e}", file=sys.stderr)
@@ -97,7 +148,7 @@ def process_files_in_directory(directory):
 # Initialize variables for the total lines of code and the language statistics
 tot_loc = 0
 total_files_found = 0
-lang_stats = defaultdict(int)
+lang_stats = defaultdict(lambda: {'total': 0, 'code': 0, 'comments': 0})
 file_type_counts = defaultdict(int)
 
 # Function to generate the codebase report
@@ -117,9 +168,11 @@ def create_report(report_path, archive_types):
         
         report_file.write("\nLanguage statistics:\n")
         for lang in sorted(lang_stats):
-            count = lang_stats[lang]
+            count = lang_stats[lang]['total']
+            code_count = lang_stats[lang]['code']
+            comment_count = lang_stats[lang]['comments']
             percentage = (count / tot_loc) * 100 if tot_loc > 0 else 0
-            report_file.write(f"{lang}: {count} lines ({percentage:.2f}%)\n")
+            report_file.write(f"{lang}: {count} lines [{code_count} code - {comment_count} comments] ({percentage:.2f}%)\n")
 
 # Main script execution
 if __name__ == "__main__":
