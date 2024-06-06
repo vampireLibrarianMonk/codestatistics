@@ -1,4 +1,4 @@
-scripts/parent_directory/*
+parent_directory/*
 scripts/tmp/*
-scripts/generation_statistics.txt
+generation_statistics.txt
 .idea/*

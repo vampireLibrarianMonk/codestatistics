@@ -28,7 +28,7 @@ python code_statistics_multiprocessing.py <directory>
 <directory>: The directory containing the code files to be analyzed.
 Features:
 
-Similar to code_statistics.py but with multiprocessing support for faster execution.
+Similar to code_statistics.py (does not have proper comment and code delineation yet) but with multiprocessing support for faster execution.
 Efficiently processes large directories by parallelizing the analysis.
 Generates a comprehensive report with detailed code statistics.
 3. create_random_files.py

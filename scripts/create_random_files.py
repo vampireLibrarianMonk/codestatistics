@@ -13,7 +13,8 @@ file_extensions = {
     "python": [".py"],
     "r": [".r", ".rdata", ".rds"],
     "java": [".java"],
-    "cpp": [".cc", ".cpp", ".cxx", ".h", ".hpp", ".hxx", ".h++", ".inl", ".ipp", ".tcc", ".tpp"]
+    "cpp": [".cc", ".cpp", ".cxx", ".h", ".hpp", ".hxx", ".h++", ".inl", ".ipp", ".tcc", ".tpp"],
+    "": [""],
 }
 
 # Comment symbols for each file extension
@@ -62,12 +63,16 @@ def create_random_subdirectory_path(base_path, max_depth):
 def create_random_code_lines(extension):
     num_lines = random.randint(5, 20)  # Random number of lines of code
     code_lines = []
+
+    if not extension:
+        print()
+
     single_line_comment_symbol, multi_line_comment_symbols = comment_symbols.get(extension, ('#', ('"""', '"""')))
     comment_count = 0
     code_count = 0
 
     for _ in range(num_lines):
-        if random.random() < 0.1:  # 10% chance to start a multi-line comment
+        if random.random() < 0.1 and extension:  # 10% chance to start a multi-line comment
             code_lines.append(multi_line_comment_symbols[0])
             filler_lines = random.randint(1, 5)
             for _ in range(filler_lines):
@@ -75,7 +80,7 @@ def create_random_code_lines(extension):
                 comment_count += 1
             code_lines.append(multi_line_comment_symbols[1])
             comment_count += 2  # Start and end symbols
-        elif random.random() < 0.2:  # 20% chance to add a single-line comment
+        elif random.random() < 0.2 and extension:  # 20% chance to add a single-line comment
             line_length = random.randint(10, 80)
             code_lines.append(single_line_comment_symbol + ' ' + random_string(line_length))
             comment_count += 1
@@ -105,32 +110,32 @@ def archive_directory(directory, archive_format):
 # Function to create files in a directory with specified parameters
 def create_files_in_directory(parent_directory, num_subdirs, num_files, max_depth):
     os.makedirs(parent_directory, exist_ok=True)
-    
+
     total_files_created = 0
     subdirs_created = set()
     file_type_counts = defaultdict(int)
     lang_stats = defaultdict(lambda: {'total': 0, 'code': 0, 'comments': 0})
     tot_loc = 0
-    
+
     for _ in range(num_subdirs):
         subdir_paths = create_random_subdirectory_path(parent_directory, max_depth)
         subdirs_created.update(subdir_paths)
-        
+
         for subdir_path in subdir_paths:
             for _ in range(num_files):
                 # Choose a random language and extension
                 language = random.choice(list(file_extensions.keys()))
                 extension = random.choice(file_extensions[language]).lower()  # Ensure extension is in lowercase
-                
+
                 # Create a random filename
                 file_name = random_string(random.randint(5, 10)) + extension
                 file_path = os.path.join(subdir_path, file_name)
-                
+
                 # Write random code lines to the file
                 code, code_count, comment_count, total_lines = create_random_code_lines(extension)
                 with open(file_path, 'w') as file:
                     file.write(code)
-                
+
                 file_type_counts[extension] += 1
                 lang_stats[extension]['total'] += total_lines
                 lang_stats[extension]['comments'] += comment_count
@@ -152,7 +157,7 @@ def create_files_in_directory(parent_directory, num_subdirs, num_files, max_dept
 # Function to write statistics to a file
 def write_statistics_to_file(statistics, output_file_path, parent_directory, num_subdirs, num_files, max_depth):
     subdirs_created, total_files_created, file_type_counts, lang_stats, tot_loc = statistics
-    
+
     with open(output_file_path, 'w') as report_file:
         report_file.write(f"Parent directory: {parent_directory}\n")
         report_file.write(f"Number of subdirectories: {num_subdirs}\n")
@@ -162,11 +167,11 @@ def write_statistics_to_file(statistics, output_file_path, parent_directory, num
         report_file.write(f"Total subdirectories created: {subdirs_created}\n")
         report_file.write(f"Total files created: {total_files_created}\n")
         report_file.write(f"Total lines of code generated: {tot_loc}\n\n")
-        
+
         report_file.write("Files of each type created:\n")
         for ext in sorted(file_type_counts):
             report_file.write(f"{ext}: {file_type_counts[ext]}\n")
-        
+
         report_file.write("\nLanguage statistics:\n")
         for ext in sorted(lang_stats):
             count = lang_stats[ext]['total']
@@ -179,15 +184,15 @@ if __name__ == "__main__":
     if len(sys.argv) != 5:
         print("Usage: python script.py <parent_directory> <num_subdirs> <num_files> <max_depth>")
         sys.exit(1)
-    
+
     parent_directory = sys.argv[1]
     num_subdirs = int(sys.argv[2])
     num_files = int(sys.argv[3])
     max_depth = int(sys.argv[4])
-    
+
     statistics = create_files_in_directory(parent_directory, num_subdirs, num_files, max_depth)
     output_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "generation_statistics.txt")
     write_statistics_to_file(statistics, output_file_path, parent_directory, num_subdirs, num_files, max_depth)
-    
+
     print(f"Created {statistics[0]} subdirectories with random depths and {statistics[1]} files each in {parent_directory}")
     print(f"Statistics written to {output_file_path}")
