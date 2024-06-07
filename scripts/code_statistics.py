@@ -5,6 +5,15 @@ import tempfile
 import shutil
 from collections import defaultdict
 
+# Dictionary of folder names
+folder_names = {
+    "git": [".git"],
+    # "config": [".config"],
+    # "cache": [".cache"],
+    # Add more folder names as needed
+}
+
+folder_names_list = [name for names in folder_names.values() for name in names]
 
 # Function to extract archives using tar, gz, or zip format
 def extract(archive, extract_to):
@@ -143,7 +152,9 @@ def extract_all_archives(search_dir):
 def process_files_in_directory(directory):
     global lang_stats, total_files_found, file_type_counts
     print(f"Processing directory: {directory}")
-    for root, _, files in os.walk(directory):
+    for root, dirs, files in os.walk(directory):
+        # Filter out directories you want to ignore
+        dirs[:] = [d for d in dirs if d not in folder_names_list]
         for file in files:
             if file.endswith(('.tar.gz', '.tar.bz2', '.tar', '.zip', '.tgz')):
                 continue  # Skip archive files
@@ -157,7 +168,6 @@ def process_files_in_directory(directory):
                 total_files_found += 1
             except Exception as e:
                 print(f"Error processing file {file_path}: {e}", file=sys.stderr)
-
 
 # Initialize variables for the total lines of code and the language statistics
 tot_loc = 0
@@ -196,7 +206,7 @@ if __name__ == "__main__":
     import sys
 
     if len(sys.argv) != 2:
-        print("Usage: python script.py <search_directory>")
+        print("Usage: python code_statistics.py <search_directory>")
         sys.exit(1)
 
     search_dir = sys.argv[1]

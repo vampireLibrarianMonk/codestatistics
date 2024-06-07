@@ -1,0 +1,100 @@
+File: C:\Users\591245\codestatistics\parent_directory\2051.tar, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\2051.tar, Position: 0, Term: Confidential
+File: C:\Users\591245\codestatistics\parent_directory\2051.tar, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\2051.tar, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\2051.tar, Position: 0, Term: Confidential
+File: C:\Users\591245\codestatistics\parent_directory\2051.tar, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\2051.tar, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\2051.tar, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\2051.tar, Position: 0, Term: Confidential
+File: C:\Users\591245\codestatistics\parent_directory\2051.tar, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\2406.tar, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\2406.tar, Position: 0, Term: Warranty
+File: C:\Users\591245\codestatistics\parent_directory\2406.tar, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\2406.tar, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\2406.tar, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\2406.tar, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\2406.tar, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\2406.tar, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\2406.tar, Position: 0, Term: Confidential
+File: C:\Users\591245\codestatistics\parent_directory\2406.tar, Position: 0, Term: Warranty
+File: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2, Position: 0, Term: Warranty
+File: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2, Position: 0, Term: Warranty
+File: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2, Position: 0, Term: Redistribution
+File: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz, Position: 0, Term: Confidential
+File: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz, Position: 0, Term: Warranty
+File: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz, Position: 0, Term: Redistribution
+File: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz, Position: 0, Term: Warranty
+File: C:\Users\591245\codestatistics\parent_directory\6190.zip, Position: 0, Term: Redistribution
+File: C:\Users\591245\codestatistics\parent_directory\6190.zip, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\6190.zip, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\6190.zip, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\6190.zip, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\6190.zip, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\6190.zip, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\6190.zip, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\6190.zip, Position: 0, Term: Confidential
+File: C:\Users\591245\codestatistics\parent_directory\6190.zip, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz, Position: 0, Term: Redistribution
+File: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz, Position: 0, Term: Confidential
+File: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz, Position: 0, Term: Confidential
+File: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz, Position: 0, Term: Redistribution
+File: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2, Position: 0, Term: Redistribution
+File: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2, Position: 0, Term: Warranty
+File: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2, Position: 0, Term: All rights reserved
+File: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2, Position: 0, Term: Warranty
+File: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz, Position: 0, Term: Terms of use
+File: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz, Position: 0, Term: Confidential
+File: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz, Position: 0, Term: Warranty
+File: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz, Position: 0, Term: Confidential
+File: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz, Position: 0, Term: License
+File: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz, Position: 0, Term: Warranty
+File: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz, Position: 0, Term: Redistribution
+File: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz, Position: 0, Term: Copyright
+File: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz, Position: 0, Term: Redistribution
+File: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz, Position: 0, Term: Proprietary
+File: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz, Position: 0, Term: Proprietary

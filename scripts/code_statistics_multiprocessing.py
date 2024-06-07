@@ -3,10 +3,19 @@ import tarfile
 import zipfile
 import tempfile
 import shutil
-from collections import defaultdict
 from multiprocessing import Pool, Manager, cpu_count
 import argparse
 import sys
+
+# Dictionary of folder names
+folder_names = {
+    "git": [".git"],
+    # "config": [".config"],
+    # "cache": [".cache"],
+    # Add more folder names as needed
+}
+
+folder_names_list = [name for names in folder_names.values() for name in names]
 
 # Function to extract archives using tar, gz, or zip format
 def extract(archive, extract_to, archive_types, lock):
@@ -83,7 +92,9 @@ def extract_all_archives(search_dir, archive_types, lock):
 # Function to process source code files in a single extracted directory
 def process_files_in_directory(directory, lang_stats, tot_loc, file_type_counts, total_files_found, lock):
     print(f"Processing directory: {directory} with PID: {os.getpid()}")
-    for root, _, files in os.walk(directory):
+    for root, dirs, files in os.walk(directory):
+        # Filter out directories you want to ignore
+        dirs[:] = [d for d in dirs if d not in folder_names_list]
         for file in files:
             if file.endswith(('.tar.gz', '.tar.bz2', '.tar', '.zip', '.tgz')):
                 continue  # Skip archive files

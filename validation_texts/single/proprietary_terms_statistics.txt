@@ -1,0 +1,114 @@
+Proprietary Terms Statistics:
+
+Term: All rights reserved, File: extracted\COPYING, Archive: C:\Users\591245\codestatistics\parent_directory\2051.tar
+Term: Terms of use, File: extracted\DISCLAIMER, Archive: C:\Users\591245\codestatistics\parent_directory\2051.tar
+Term: All rights reserved, File: extracted\file.cjs, Archive: C:\Users\591245\codestatistics\parent_directory\2051.tar
+Term: Proprietary, File: extracted\file.js, Archive: C:\Users\591245\codestatistics\parent_directory\2051.tar
+Term: Confidential, File: extracted\file.mjs, Archive: C:\Users\591245\codestatistics\parent_directory\2051.tar
+Term: Copyright, File: extracted\file.ts, Archive: C:\Users\591245\codestatistics\parent_directory\2051.tar
+Term: Copyright, File: extracted\LICENSE, Archive: C:\Users\591245\codestatistics\parent_directory\2051.tar
+Term: Confidential, File: extracted\LICENSE.txt, Archive: C:\Users\591245\codestatistics\parent_directory\2051.tar
+Term: Confidential, File: extracted\NOTICE, Archive: C:\Users\591245\codestatistics\parent_directory\2051.tar
+Term: All rights reserved, File: extracted\README.md, Archive: C:\Users\591245\codestatistics\parent_directory\2051.tar
+Term: License, File: extracted\COPYING, Archive: C:\Users\591245\codestatistics\parent_directory\2406.tar
+Term: License, File: extracted\DISCLAIMER, Archive: C:\Users\591245\codestatistics\parent_directory\2406.tar
+Term: License, File: extracted\file.cjs, Archive: C:\Users\591245\codestatistics\parent_directory\2406.tar
+Term: Terms of use, File: extracted\file.js, Archive: C:\Users\591245\codestatistics\parent_directory\2406.tar
+Term: Confidential, File: extracted\file.mjs, Archive: C:\Users\591245\codestatistics\parent_directory\2406.tar
+Term: Warranty, File: extracted\file.ts, Archive: C:\Users\591245\codestatistics\parent_directory\2406.tar
+Term: Proprietary, File: extracted\LICENSE, Archive: C:\Users\591245\codestatistics\parent_directory\2406.tar
+Term: Warranty, File: extracted\LICENSE.txt, Archive: C:\Users\591245\codestatistics\parent_directory\2406.tar
+Term: All rights reserved, File: extracted\NOTICE, Archive: C:\Users\591245\codestatistics\parent_directory\2406.tar
+Term: License, File: extracted\README.md, Archive: C:\Users\591245\codestatistics\parent_directory\2406.tar
+Term: License, File: extracted\COPYING, Archive: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2
+Term: Copyright, File: extracted\DISCLAIMER, Archive: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2
+Term: Redistribution, File: extracted\file.cjs, Archive: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2
+Term: Proprietary, File: extracted\file.js, Archive: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2
+Term: Proprietary, File: extracted\file.mjs, Archive: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2
+Term: Terms of use, File: extracted\file.ts, Archive: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2
+Term: Copyright, File: extracted\LICENSE, Archive: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2
+Term: Warranty, File: extracted\LICENSE.txt, Archive: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2
+Term: All rights reserved, File: extracted\NOTICE, Archive: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2
+Term: Warranty, File: extracted\README.md, Archive: C:\Users\591245\codestatistics\parent_directory\3005.tar.bz2
+Term: All rights reserved, File: extracted\COPYING, Archive: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz
+Term: All rights reserved, File: extracted\DISCLAIMER, Archive: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz
+Term: Copyright, File: extracted\file.cjs, Archive: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz
+Term: All rights reserved, File: extracted\file.js, Archive: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz
+Term: Proprietary, File: extracted\file.mjs, Archive: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz
+Term: Terms of use, File: extracted\file.ts, Archive: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz
+Term: License, File: extracted\LICENSE, Archive: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz
+Term: Copyright, File: extracted\LICENSE.txt, Archive: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz
+Term: All rights reserved, File: extracted\NOTICE, Archive: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz
+Term: Terms of use, File: extracted\README.md, Archive: C:\Users\591245\codestatistics\parent_directory\3902.tar.gz
+Term: License, File: extracted\COPYING, Archive: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz
+Term: Warranty, File: extracted\DISCLAIMER, Archive: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz
+Term: Terms of use, File: extracted\file.cjs, Archive: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz
+Term: Redistribution, File: extracted\file.js, Archive: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz
+Term: All rights reserved, File: extracted\file.mjs, Archive: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz
+Term: Warranty, File: extracted\file.ts, Archive: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz
+Term: Terms of use, File: extracted\LICENSE, Archive: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz
+Term: License, File: extracted\LICENSE.txt, Archive: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz
+Term: Terms of use, File: extracted\NOTICE, Archive: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz
+Term: Confidential, File: extracted\README.md, Archive: C:\Users\591245\codestatistics\parent_directory\4135.tar.gz
+Term: Copyright, File: COPYING, Archive: C:\Users\591245\codestatistics\parent_directory\6190.zip
+Term: Proprietary, File: DISCLAIMER, Archive: C:\Users\591245\codestatistics\parent_directory\6190.zip
+Term: Proprietary, File: file.cjs, Archive: C:\Users\591245\codestatistics\parent_directory\6190.zip
+Term: All rights reserved, File: file.js, Archive: C:\Users\591245\codestatistics\parent_directory\6190.zip
+Term: Confidential, File: file.mjs, Archive: C:\Users\591245\codestatistics\parent_directory\6190.zip
+Term: All rights reserved, File: file.ts, Archive: C:\Users\591245\codestatistics\parent_directory\6190.zip
+Term: Redistribution, File: LICENSE, Archive: C:\Users\591245\codestatistics\parent_directory\6190.zip
+Term: All rights reserved, File: LICENSE.txt, Archive: C:\Users\591245\codestatistics\parent_directory\6190.zip
+Term: Copyright, File: NOTICE, Archive: C:\Users\591245\codestatistics\parent_directory\6190.zip
+Term: Terms of use, File: README.md, Archive: C:\Users\591245\codestatistics\parent_directory\6190.zip
+Term: All rights reserved, File: extracted\COPYING, Archive: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz
+Term: All rights reserved, File: extracted\DISCLAIMER, Archive: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz
+Term: Confidential, File: extracted\file.cjs, Archive: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz
+Term: Redistribution, File: extracted\file.js, Archive: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz
+Term: Terms of use, File: extracted\file.mjs, Archive: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz
+Term: Proprietary, File: extracted\file.ts, Archive: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz
+Term: Redistribution, File: extracted\LICENSE, Archive: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz
+Term: Confidential, File: extracted\LICENSE.txt, Archive: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz
+Term: All rights reserved, File: extracted\NOTICE, Archive: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz
+Term: Terms of use, File: extracted\README.md, Archive: C:\Users\591245\codestatistics\parent_directory\6359.tar.gz
+Term: Terms of use, File: extracted\COPYING, Archive: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2
+Term: Warranty, File: extracted\DISCLAIMER, Archive: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2
+Term: Copyright, File: extracted\file.cjs, Archive: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2
+Term: All rights reserved, File: extracted\file.js, Archive: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2
+Term: Warranty, File: extracted\file.mjs, Archive: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2
+Term: Proprietary, File: extracted\file.ts, Archive: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2
+Term: License, File: extracted\LICENSE, Archive: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2
+Term: Redistribution, File: extracted\LICENSE.txt, Archive: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2
+Term: Copyright, File: extracted\NOTICE, Archive: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2
+Term: Proprietary, File: extracted\README.md, Archive: C:\Users\591245\codestatistics\parent_directory\6835.tar.bz2
+Term: Confidential, File: extracted\COPYING, Archive: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz
+Term: Copyright, File: extracted\DISCLAIMER, Archive: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz
+Term: License, File: extracted\file.cjs, Archive: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz
+Term: Confidential, File: extracted\file.js, Archive: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz
+Term: Copyright, File: extracted\file.mjs, Archive: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz
+Term: License, File: extracted\file.ts, Archive: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz
+Term: Terms of use, File: extracted\LICENSE, Archive: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz
+Term: Terms of use, File: extracted\LICENSE.txt, Archive: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz
+Term: License, File: extracted\NOTICE, Archive: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz
+Term: Warranty, File: extracted\README.md, Archive: C:\Users\591245\codestatistics\parent_directory\9754.tar.gz
+Term: Warranty, File: extracted\COPYING, Archive: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz
+Term: Copyright, File: extracted\DISCLAIMER, Archive: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz
+Term: Redistribution, File: extracted\file.cjs, Archive: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz
+Term: Proprietary, File: extracted\file.js, Archive: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz
+Term: Proprietary, File: extracted\file.mjs, Archive: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz
+Term: Proprietary, File: extracted\file.ts, Archive: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz
+Term: Copyright, File: extracted\LICENSE, Archive: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz
+Term: Proprietary, File: extracted\LICENSE.txt, Archive: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz
+Term: Copyright, File: extracted\NOTICE, Archive: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz
+Term: Redistribution, File: extracted\README.md, Archive: C:\Users\591245\codestatistics\parent_directory\9959.tar.gz
+
+Summary:
+
+Found 100 occurrences
+License: 12
+Copyright: 15
+All rights reserved: 17
+Proprietary: 14
+Confidential: 10
+Terms of use: 14
+Redistribution: 8
+Warranty: 10

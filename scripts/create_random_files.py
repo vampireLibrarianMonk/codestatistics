@@ -15,7 +15,18 @@ file_extensions = {
     "java": [".java"],
     "cpp": [".cc", ".cpp", ".cxx", ".h", ".hpp", ".hxx", ".h++", ".inl", ".ipp", ".tcc", ".tpp"],
     "": [""],
+    "weird": [".jpg #4 #5 #9"]
 }
+
+# Dictionary of folder names
+folder_names = {
+    "git": [".git"],
+    # "config": [".config"],
+    # "cache": [".cache"],
+    # Add more folder names as needed
+}
+
+folder_names_list = [name.replace(".","") for names in folder_names.values() for name in names]
 
 # Comment symbols for each file extension
 comment_symbols = {
@@ -57,15 +68,21 @@ def create_random_subdirectory_path(base_path, max_depth):
         subdir_path = os.path.join(subdir_path, subdir_name)
         subdir_paths.append(subdir_path)
         os.makedirs(subdir_path, exist_ok=True)
+
+        # 5% chance to randomly choose and create additional subfolders from folder_names
+        if random.random() < 0.10:
+            for names in folder_names.values():
+                random_folder = random.choice(names)
+                random_folder_path = os.path.join(subdir_path, random_folder)
+                subdir_paths.append(random_folder_path)
+                os.makedirs(random_folder_path, exist_ok=True)
+
     return subdir_paths
 
 # Function to create random code lines with comments
 def create_random_code_lines(extension):
     num_lines = random.randint(5, 20)  # Random number of lines of code
     code_lines = []
-
-    if not extension:
-        print()
 
     single_line_comment_symbol, multi_line_comment_symbols = comment_symbols.get(extension, ('#', ('"""', '"""')))
     comment_count = 0
@@ -122,6 +139,8 @@ def create_files_in_directory(parent_directory, num_subdirs, num_files, max_dept
         subdirs_created.update(subdir_paths)
 
         for subdir_path in subdir_paths:
+            if subdir_path.split(".")[-1] in folder_names_list:
+                continue
             for _ in range(num_files):
                 # Choose a random language and extension
                 language = random.choice(list(file_extensions.keys()))

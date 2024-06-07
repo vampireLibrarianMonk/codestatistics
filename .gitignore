@@ -2,3 +2,5 @@ parent_directory/*
 scripts/tmp/*
 generation_statistics.txt
 .idea/*
+TMP
+scripts/*.txt

@@ -74,10 +74,12 @@ def search_in_designated_directory(archives_dir):
                 os.makedirs(tmp_dir, exist_ok=True)
                 extract_archive(archive_path, tmp_dir)
                 found_terms = search_in_directory(tmp_dir, tmp_dir, archive_path)
+                print(f"Found terms: [{', '.join(term[0] for term in found_terms)}], Archive Path: {archive_path}")
                 found_terms_all.extend(found_terms)
                 shutil.rmtree(tmp_dir)
             elif os.path.isfile(archive_path):
                 found_terms = search_in_file(archive_path, archive_path, root)
+                print(f"Found terms: [{', '.join(term[0] for term in found_terms)}], Archive Path: {archive_path}")
                 found_terms_all.extend(found_terms)
             else:
                 print(f"Skipping '{archive_path}' as it is not a supported archive format.")
@@ -91,12 +93,14 @@ def write_report(found_terms):
             term_counts[term] += 1
             report_file.write(f"Term: {term}, File: {file_path}, Archive: {archive_path}\n")
         report_file.write("\nSummary:\n\n")
+        total_count = sum(count for term, count in term_counts.items())  # Line to count all occurrences
+        report_file.write(f"Found {total_count} occurrences\n")
         for term, count in term_counts.items():
-            report_file.write(f"{term}: {count}\n")
+            report_file.write(f"\t{term}: {count}\n")
 
 if __name__ == "__main__":
     if len(sys.argv) != 2:
-        print("Usage: python script_name.py <base_search_directory>")
+        print("Usage: python proprietary_term_search.py <base_search_directory>")
         sys.exit(1)
 
     base_search_directory = sys.argv[1]

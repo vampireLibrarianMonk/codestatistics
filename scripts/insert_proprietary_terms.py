@@ -101,7 +101,7 @@ def add_files_to_archive(archive_path, generated_files, temp_dir):
 
         # Log the location of inserted proprietary term
         with open(LOG_FILE, 'a') as log:
-            log.write(f"File: {dest_path}, Position: {position}, Term: {term}\n")
+            log.write(f"File: {archive_path}, Position: {position}, Term: {term}\n")
 
     os.remove(archive_path)
     create_archive(archive_path, extract_dir)
@@ -157,7 +157,7 @@ if __name__ == "__main__":
     import sys
 
     if len(sys.argv) < 2 or len(sys.argv) > 3:
-        print("Usage: python script_name.py <parent_directory> [max_files_per_subdirectory]")
+        print("Usage: python insert_proprietary_terms.py <parent_directory> [max_files_per_subdirectory]")
     else:
         parent_directory = sys.argv[1]
         max_files = int(sys.argv[2]) if len(sys.argv) == 3 else 10
