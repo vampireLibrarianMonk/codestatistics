@@ -1,0 +1,60 @@
+Parent directory: C:\Users\591245\codestatistics\parent_directory
+Number of subdirectories: 10
+Number of files per subdirectory: 45
+Maximum subdirectory depth: 5
+
+Total subdirectories created: 40
+Total files created: 1620
+Total lines of code generated: 27264
+
+Files of each type created:
+: 174
+.c: 93
+.cc: 18
+.cjs: 64
+.cpp: 17
+.cxx: 18
+.h: 110
+.h++: 16
+.hpp: 18
+.hxx: 15
+.inl: 19
+.ipp: 16
+.java: 178
+.jpg #4 #5 #9: 174
+.js: 63
+.mjs: 62
+.py: 188
+.r: 59
+.rdata: 60
+.rds: 47
+.tcc: 18
+.tpp: 14
+.ts: 94
+.tsx: 85
+
+Language statistics:
+: 2181 lines [2181 code - 0 comments] (8.00%)
+.c: 1629 lines [839 code - 790 comments] (5.97%)
+.cc: 312 lines [182 code - 130 comments] (1.14%)
+.cjs: 1130 lines [577 code - 553 comments] (4.14%)
+.cpp: 301 lines [152 code - 149 comments] (1.10%)
+.cxx: 233 lines [123 code - 110 comments] (0.85%)
+.h: 2094 lines [1083 code - 1011 comments] (7.68%)
+.h++: 286 lines [154 code - 132 comments] (1.05%)
+.hpp: 299 lines [151 code - 148 comments] (1.10%)
+.hxx: 180 lines [112 code - 68 comments] (0.66%)
+.inl: 330 lines [169 code - 161 comments] (1.21%)
+.ipp: 261 lines [146 code - 115 comments] (0.96%)
+.java: 3320 lines [1696 code - 1624 comments] (12.18%)
+.jpg #4 #5 #9: 2993 lines [1547 code - 1446 comments] (10.98%)
+.js: 979 lines [542 code - 437 comments] (3.59%)
+.mjs: 986 lines [510 code - 476 comments] (3.62%)
+.py: 3177 lines [1684 code - 1493 comments] (11.65%)
+.r: 1039 lines [571 code - 468 comments] (3.81%)
+.rdata: 1019 lines [566 code - 453 comments] (3.74%)
+.rds: 781 lines [431 code - 350 comments] (2.86%)
+.tcc: 351 lines [177 code - 174 comments] (1.29%)
+.tpp: 209 lines [103 code - 106 comments] (0.77%)
+.ts: 1650 lines [829 code - 821 comments] (6.05%)
+.tsx: 1524 lines [786 code - 738 comments] (5.59%)
